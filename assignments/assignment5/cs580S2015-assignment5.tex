@@ -1,0 +1,104 @@
+%!TEX root=cs580S2015-assignment5.tex
+% mainfile: cs580S2015-assignment5.tex
+\input{580pre.tex}
+\usepackage[compact]{titlesec}
+
+\begin{document}
+
+\MYTITLE{Assignment 5\\Managing Technical Writing with Git\\Due 23
+January 2015}
+\MYHEADERS{Managing Technical Writing with Git and Vim}{Due 23 January 2015}
+
+\section*{Introduction}
+
+  Researchers and developers in the field of computer science normally use a version control system to manage most of the
+  artifacts produced during many of the phases associated with their work. In this course, we will always use the Git
+  distributed version control system to manage the files associated with our assignments.  In this assignment, you will
+  learn how to use the Bitbucket service for managing Git repositories and the {\tt git} command-line tool in the Ubuntu
+  Linux operating system.
+
+% Beyond using a version control system, researchers and developers in computer science often use an integrated
+% development environment (IDE) for the creation of papers that contain paragraphs of text, formal statements of
+% algorithms, mathematical equations, technical diagrams, symbolic references, lengthy bibliographies, and other important
+% items.  In this course, we will always use Vim and GVim when we complete technical writing assignments involving, for
+% instance, the creation of a proposal or presentation slides. In this assignment, you will learn the basics associated
+% with the use of Vim to write a technical document stored in a Git repository.
+
+\section*{Configuring Git and Bitbucket}
+
+During this assignment and subsequent assignments, we will securely communicate with the Bitbucket.org servers that will
+host our all of our projects.  In this assignment, we will perform all of the steps to configure the accounts
+on the departmental servers and the Bitbucket service.  Throughout the assignment, you should refer to the following Web
+site for additional information: \url{https://confluence.atlassian.com/display/BITBUCKET/Bitbucket+101}.
+
+Throughout the completion of this assignment, please be sure to keep a record of all of the steps that you took to
+configure Git and Bitbucket.  You should also practice the steps multiple times to ensure that you can easily use Git
+throughout the remainder of the academic semester.
+
+Please follow the below steps to configure and begin to use the Git service provided by Bitbucket:
+
+\begin{enumerate}
+
+  \item If you have never done so before, you must use the {\tt ssh-keygen} program to create secure-shell keys that
+    you can use to support your communication with the Bitbucket servers.  Type {\tt man ssh-keygen} and talk with
+    one of the course instructors to learn more about how to use this program.  What files does {\tt ssh-keygen} produce?
+    Where does this program store these files?
+
+  \item If you do not already have a Bitbucket account, please go to the Bitbucket Web site and create one ---
+    make sure that you use your {\tt allegheny.edu} email address so that you can create an unlimited number of free
+    Bitbucket repositories.
+
+  \item Now, you need to test to see if you can authenticate with the Bitbucket servers. First, show one of the course
+    instructors that you have correctly configured your Bitbucket account.  Now, ask this instructor to share the
+    course's Git repository with you.  Open a terminal window on your workstation and change into the directory where
+    you will store your files for this course.  For instance, you might make a {\tt cs580S2015/} directory that will
+    contain the Git repository that we will always use to share files with you.  Next, please type the following
+    command: {\tt git clone git@bitbucket.org:gkapfham/cs580s2015-share.git}.  If everything worked correctly, you
+    should be able to download some files that you can use for this assignment. Please resolve any problems that you
+    encountered by first reviewing the Bitbucket documentation and then asking a course instructor for additional
+    assistance.
+
+\end{enumerate}
+
+\section*{Creating a New Repository}
+
+  % Now, go into the {\tt
+  % assignments/survey-of-interests-assignment1} directory of the {\tt cs580s2015-share} repository and copy the three
+% files to a suitable directory inside of a directory in your repository. Once the files are in your own Git repository,
+% please use the {\tt git add} and {\tt git commit} commands to add them correctly. 
+
+Now that you have learned how to clone an existing Git repository, you should create a new repository in the {\tt
+cs580S2015/} directory that you previously created.  First, create a new directory called {\tt cs580S2015-<your user
+name>}. Then, change into this directory and type the command {\tt git init .}. Then, you need to start adding some
+files into your repository. For instance, if you have already types in your survey of interests, you could add that to
+your repository using the command {\tt git add} and {\tt git commit}.  Next, you should use the Bitbucket Web site to
+create a repository that has the same name as the local directory and local repository.  You must follow Bitbucket's
+instructions to push the code and tags in your local repository to the remote one.
+
+Students who would like to learn more about Git can consult Web sites like \url{http://try.github.io/} and
+\url{http://gitimmersion.com/}.  At minimum, you should ensure that you fully understand how to use the following Git
+commands in the terminal window:
+
+\begin{enumerate}
+
+        \item {\tt git init}
+
+        \item {\tt git status}
+
+        \item {\tt git add}
+
+        \item {\tt git commit}
+
+        \item {\tt git push}
+
+        \item {\tt git pull}
+
+\end{enumerate}
+
+In summary, the main point of this assignment is to review how to create and use Git and Bitbucket. We will leverage
+these tools throughout the remainder of the semester.  You should make sure that you are able to both access code that I
+share with you and share code with me through a Git repository. Please see the course instructor if you cannot complete
+these steps.
+
+
+\end{document}
