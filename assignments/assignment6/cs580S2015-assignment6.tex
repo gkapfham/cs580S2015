@@ -1,0 +1,154 @@
+%!TEX root=cs580S2015-assignment6.tex
+% mainfile: cs580S2015-assignment6.tex 
+\input{580pre.tex}
+\usepackage[compact]{titlesec}
+
+\begin{document}
+
+\MYTITLE{Assignment 6\\Writing and Presenting with \LaTeX\ and Beamer\\
+Due 30 January 2015}
+\MYHEADERS{Assignment 6}{Due Fri., 30 Jan.}
+
+\subsection*{Introduction to \LaTeX}
+\LaTeX\ is a typesetting system used by computer scientists and mathematicians
+the world over. Designed by Leslie Lamport (currently at Microsoft Research),
+it is actually a set of procedures that build upon an earlier typesetting
+system, \TeX, designed by Donald Knuth (retired from Stanford University).
+You are strongly encouraged to read about Leslie Lamport and Donald Knuth 
+online---they are pioneers in computer science research and are 
+names you should know.
+
+Unlike WYSIWYG word processors such as Microsoft Word or Open Office, \LaTeX\ 
+uses a set of predefined commands, environments, special characters, etc.
+which are assembled by the user into a description of a document. For
+example, here is the \LaTeX\ source code and the typeset output
+for a sample paragraph:
+\begin{center}
+\begin{tabular}{p{3in}p{3in}}
+\multicolumn{1}{c}{\bf \LaTeX\ Source:}&
+\multicolumn{1}{c}{\bf Output:}\\\hline
+\begin{minipage}{3in}
+\small
+\begin{verbatim}
+To determine the distance $d$ 
+of a point $(x_0,y_0)$ from a 
+second point $(x_1,y_1)$, we 
+may use the \emph{distance
+formula}:
+\[d=\sqrt{(x_1-x_0)^2+(y_1-y_0)^2}\]
+This generalizes to higher dimensions.
+\end{verbatim}
+\end{minipage}
+&
+\begin{minipage}{3in}
+To determine the distance $d$ 
+of a point $(x_0,y_0)$ from a 
+second point $(x_1,y_1)$, we 
+may use the \emph{distance
+formula}:
+\[d=\sqrt{(x_1-x_0)^2+(y_1-y_0)^2}\]
+This generalizes to higher dimensions.
+\end{minipage}
+\end{tabular}
+\end{center}
+
+There are a number of useful software tools for working with \LaTeX,
+including the {\tt vim} text editor. Get to know them---they are great
+time-savers.  There is another program that we will be using this
+semester: \BibTeX. You will briefly encounter it today.
+
+\subsection*{Look at a Sample Proposal File}
+The ``{\tt cs580s2015-share}'' repository contains a new
+folder named ``{\tt proposal-template}.'' Review the instructions from
+last Friday on how to ``pull'' this onto your own copy of the repository.
+
+There are three files: 
+\begin{itemize}
+    \itemsep0in
+\item
+{\tt flow.eps}, an image file used to show how
+figures can be included in a \LaTeX\ document; 
+\item
+\verb$senior_thesis_proposal.tex$, the main document;
+\item
+\verb$senior_thesis_proposal.bib$, a sample bibliography file
+\end{itemize}
+
+Use {\tt vim} or {\tt gvim} to edit the file
+\verb$senior_thesis_proposal.tex$.  Use the ``\verb$pdflatex$'' command
+to run this through the \LaTeX\ processor and then use Evince to view
+the PDF file. If you see a warning message, you can ignore it and
+checking to ensure that it is not serious.
+
+Add the following to the ``Introduction'' section of the proposal template:
+\begin{itemize}
+\item
+a display equation that uses a number of specialized
+mathematical characters---Greek letters, arrows, subscript, superscripts,
+etc. For example, can you recreate the following?
+\[\sum_{i=1}^{\infty}\frac{1}{i^2} = \frac{\pi^2}{6}\]
+\item
+a numbered list of at least four items; include a nested
+itemized list (``bullet list'') list as one of the items  and
+a nested numbered list as one of the others (we will discuss 
+the {\tt enumerate} and {\tt itemize} environments in class)
+\item
+a bullet list of at least four items; include a nested numbered
+list as one of the items and a nested bullet list as one of the others
+\item
+a ``verbatim'' paragraph (we will discuss the {\tt verbatim}
+environment in class)
+\item
+at least two paragraphs of plain text that include at least one 
+non-trivial inline
+mathematical formula, one or more words in fixed-width font (e.g., names 
+of Java classes are often typed in fixed-width font),
+one or more words in italic font (e.g., a newly-defined term 
+might be italicized the first
+time it appears in a paper), one or more words in bold-face font, and
+two or more foreign accents (circumflex, tilde, acute accent, cedilla, etc.).
+
+
+\end{itemize}
+
+
+Compile it to a PDF and place it in
+a new subdirectory of the repository you created last week. (For example, if you
+created a repository named ``{\tt cs580S2015-<yourname>},'' you might create a
+subdirectory named ``{\tt assignment6}.'') ``Add,'' ``commit,'' and ``push''
+your file. If you haven't already done so, be sure to share your repository
+with all of the instructors for the course.
+
+\newpage
+
+\subsection*{Introduction to Beamer}
+\textbf{Beamer} is a \LaTeX\ document class that is used to create presentation slides.
+The beamer class uses a special syntax for defining slides (known as 'frames'). 
+A beamer presentation is created like any other \LaTeX\ document. 
+Beamer also allows you to make 'handouts', that is the output suitable for printing, without the overlays.
+
+\subsection*{Beamer Sample Slides}
+The ``{\tt cs580s2015-share}'' repository contains a new
+folder named ``{\tt slides-template}.'' It contains sample Beamer slide templates that you will
+be using to create a new set of slides. There are two subdirectories in this directory:
+\begin{enumerate}
+\item simple: contains a basic Beamer source for creating slides
+\item allegheny: contains source for creating slides that are color-customized to Allegheny College. You will notice this subdirectory contains a few .sty files that customize the layout of the slides and colors.tex file that customizes the colors. At some point you may want to play around with these files to create your own customized style for the slides, but it does not have to be today!
+\end{enumerate}
+
+\textbf{Beamer Assignment:}
+Select a theme for your slides, you may not use 'default' or 'Berkeley' themes that we have used in class. Create a presentation with at least 5 slides. You slides should have the following:
+\begin{itemize} 
+	\item A box (example block, theorem, etc.)
+	\item A table with at least two columns and two rows
+	\item At least one button to jump to another slide
+	\item At least one slides with creative use of overlays
+	\item At least one link (to a website)
+\end{itemize}
+
+Compile your Beamer source to a PDF and place the ``.pdf'' along with
+``.tex'' file in the same subdirectory of the repository in which you
+placed your \LaTeX\ ``.pdf'' for the first part of this assignment.
+Please see the course instructor if you have any questions.
+
+\end{document}
